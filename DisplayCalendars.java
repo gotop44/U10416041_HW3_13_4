@@ -1,5 +1,6 @@
 /** U10416041 */
 
+/** Import GregorianCalendar */
 import java.util.GregorianCalendar;
 
 public class DisplayCalendars {
@@ -10,10 +11,10 @@ public class DisplayCalendars {
 	public static void main(String[] args) {
 		
 		if (args.length > 2) {
-            System.out.println("Invalid");
-            System.out.println("Ex: java DisplayCalendars 3 2016");
-            System.exit(1);
-        }
+            		System.out.println("Invalid");
+            		System.out.println("Ex: java DisplayCalendars 3 2016");
+            		System.exit(1);
+        	}
 		
 		int year;
 		int month;
@@ -48,8 +49,8 @@ public class DisplayCalendars {
 	/** Print the month title */
 	public static void printMonthTitle() {
 		System.out.println("         " + calendar.getMonthName() + " " + calendar.get(Calendar.YEAR));
-        System.out.println("-----------------------------");
-        System.out.println(" Sun Mon Tue Wed Thu Fri Sat");
+        	System.out.println("-----------------------------");
+        	System.out.println(" Sun Mon Tue Wed Thu Fri Sat");
 	}
 	
 	/** Print month body */
@@ -61,17 +62,18 @@ public class DisplayCalendars {
 		int i = 0;
 		
 		/** Pad space before the first day of the month */
-        for (i = 0; i < startDay; i++) {
-            System.out.print("    ");
+        	for (i = 0; i < startDay; i++) {
+            		System.out.print("    ");
 		}
 
-        for (i = 1; i <= numberOfDaysInMonth; i++) {
-            System.out.printf("%4d", i);
+        	for (i = 1; i <= numberOfDaysInMonth; i++) {
+            		System.out.printf("%4d", i);
 
-            if ((i + startDay) % 7 == 0)
-                System.out.println();
-        }
+            		if ((i + startDay) % 7 == 0) {
+                		System.out.println();
+            		}
+        	}
 
-        System.out.println();
+        	System.out.println();
 	}
 }
